@@ -1,0 +1,99 @@
+{{>layouts/header}}
+
+<table class="table">
+    <thead>
+    <tr>
+        <th scope="col">ID</th>
+        <th scope="col">Title</th>
+        <th scope="col">Content</th>
+    </tr>
+    </thead>
+    <tbody>
+    {{#FindById}}
+
+        <tr>
+            <th>{{id}}</th>
+            <td>{{title}}</td>
+            <td>{{contents}}</td>
+        </tr>
+
+    {{/FindById}}
+
+
+    </tbody>
+</table>
+
+<!--
+ comments
+<table class="table">
+    <thead>
+    <tr>
+        <th scope="col">ID</th>
+        <th scope="col">Nickname</th>
+        <th scope="col">Body</th>
+    </tr>
+    </thead>
+    <tbody>
+    {{#commentkey}}
+        <tr>
+            <th>{{id}}</th>
+            <td>{{nickname}}</td>
+            <td>{{body}}</td>
+        </tr>
+
+    {{/commentkey}}
+
+
+    </tbody>
+</table>
+comments
+-->
+
+
+
+
+<div class="mb-3 mr-5" align="right">
+    <form action="http://localhost:8080/board/{{FindById.id}}/edit/">
+        <button type="submit" class="btn btn-warning">
+            <h4>
+                Edit
+            </h4>
+        </button>
+    </form>
+</div>
+
+<div class="mb-3 mr-5" align="right">
+    <form action="http://localhost:8080/board/{{FindById.id}}/delete/">
+        <button type="submit" class="btn btn-danger">
+            <h4>
+                Delete
+            </h4>
+        </button>
+    </form>
+</div>
+
+
+<div class="mb-3 ml-3">
+    <form action="/allboard/">
+        <button type="submit" class="btn btn-primary">
+            <h4>
+                Board
+            </h4>
+        </button>
+    </form>
+</div>
+
+<div class="mt-5 ml-3">
+    <form action="/">
+        <button type="submit" class="btn btn-success">
+            <h4>
+                Home
+            </h4>
+        </button>
+    </form>
+</div>
+
+
+
+
+{{>layouts/footer}}

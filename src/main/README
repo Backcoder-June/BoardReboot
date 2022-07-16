@@ -1,0 +1,13 @@
+Testing Connection between Java and MySQL
+
+Project Structure - Import "CONNECTOR Java" JAR file in MySQL rout. (program files x 86 )
+
+SET application properties - MySQL Connecting URL, DB, USER, Password, Driver ect
+
+Also, Practicing Making Board Focusing on HTML and CSS, Java Script.
+
+TODO add new Services like ChatBot.
+
+TODO make login service work.
+
+TODO design using HTML, not depending on Mustache.
